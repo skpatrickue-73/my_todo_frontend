@@ -21,12 +21,13 @@ const mock_data = [
   },
 ];
 
-export default function TodoList() {
+export default function TodoList({todoList}) {
+
   return (
     <>
       <p>Start List:</p>
       <ul>
-      {mock_data.map(t => <li key={t.id}><Todo taskData={t}/></li>)}
+      {todoList.map(t => <li key={t.id}><Todo taskData={t}/></li>)}
       </ul>
     </>
   );
